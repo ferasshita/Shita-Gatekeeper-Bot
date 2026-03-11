@@ -54,6 +54,32 @@ app.webhooks.on('pull_request.opened', async ({ octokit, payload }) => {
   }
 })
 
+// Subscribe to the "issue_comment.created" webhook event
+app.webhooks.on('issue_comment.created', async ({ octokit, payload }) => {
+  console.log(`Received an issue comment event for #${payload.issue.number}`)
+  if (!payload.comment.body.startsWith('/close')) return
+  try {
+    await octokit.rest.issues.update({
+      owner: payload.repository.owner.login,
+      repo: payload.repository.name,
+      issue_number: payload.issue.number,
+      state: 'closed'
+    })
+    await octokit.rest.issues.createComment({
+      owner: payload.repository.owner.login,
+      repo: payload.repository.name,
+      issue_number: payload.issue.number,
+      body: 'Issue closed by Shita-Gatekeeper-Bot 🛡️'
+    })
+  } catch (error) {
+    if (error.response) {
+      console.error(`Error! Status: ${error.response.status}. Message: ${error.response.data.message}`)
+    } else {
+      console.error(error)
+    }
+  }
+})
+
 // Optional: Handle errors
 app.webhooks.onError((error) => {
   if (error.name === 'AggregateError') {
