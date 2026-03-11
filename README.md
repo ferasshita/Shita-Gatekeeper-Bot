@@ -205,4 +205,3 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) and th
 
 This project is licensed under the [MIT License](LICENSE).
 
-© 2024 Feras Shita
