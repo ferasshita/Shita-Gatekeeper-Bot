@@ -1,17 +1,14 @@
 version: 1
 ownership:
-  - name: github-app-js-sample
-    long_name: GitHub App JS Sample
-    description: Sample of a GitHub App that comments new pull requests
+  - name: shita-gatekeeper-bot
+    long_name: Shita Gatekeeper Bot
+    description: A GitHub App bot that automates pull request greetings and issue management
     kind: code
-    team: github/ecosystem-apps
-    exec_sponsor: d-sharanya
-    product_manager: hpsin
-    maintainer: nebiyou-gebretatios
-    repo: https://github.com/github/github-app-js-sample
+    owner: ferasshita
+    maintainer: ferasshita
+    repo: https://github.com/ferasshita/Shita-Gatekeeper-Bot
     sev3:
-      issue: https://github.com/github/github-app-js-sample/issues
-      slack: ce-apps
+      issue: https://github.com/ferasshita/Shita-Gatekeeper-Bot/issues
       tta: '7 business days'
     tier: 3
     qos: experimental
