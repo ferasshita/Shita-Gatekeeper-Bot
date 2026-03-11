@@ -1,7 +1,7 @@
 ## Contributing
 
-[fork]: https://github.com/github/github-app-js-sample/fork
-[pr]: https://github.com/github/github-app-js-sample/compare
+[fork]: https://github.com/ferasshita/Shita-Gatekeeper-Bot/fork
+[pr]: https://github.com/ferasshita/Shita-Gatekeeper-Bot/compare
 [style]: https://standardjs.com/rules.html
 [code-of-conduct]: CODE_OF_CONDUCT.md
 
